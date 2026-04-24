@@ -13,4 +13,3 @@ public class AddPoints : MonoBehaviour
         }
     }
 }
-x

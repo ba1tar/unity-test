@@ -13,18 +13,37 @@ public class LixoSpawnerController : MonoBehaviour
     public int MaxPoints;
     public int points = 0;
     public TMP_Text pointsText;
+    public TMP_Text victoryText;
     
+    void Start()
+{
+    StartCoroutine(SpawnRoutine());
+    pointsText.text = "Points: 0";
+    victoryText.gameObject.SetActive(false);
+}
+
+    void Update()
+    {
+        
+    }
 
     IEnumerator SpawnRoutine() {
         while(points<MaxPoints){
-            Instantiate(Lixo, new Vector3(Random.Range(-maximumX, maximumX+1), fixedY, fixedZ), Quaternion.identity);
+            Instantiate(Lixo, 
+                        new Vector3(Random.Range(-maximumX, maximumX+1), 
+                                   fixedY,
+                                   fixedZ),
+                         Quaternion.identity);
             yield return new WaitForSeconds(timer);
         }
+        victoryText.gameObject.SetActive(true);
     }
     
-    public void AddToPoints(int Value)
+    public void AddToPoints(int value)
     {
-        points += Value;
+        points += value;
         pointsText.text = "Points: "+points.ToString();
     }
 }
+
+

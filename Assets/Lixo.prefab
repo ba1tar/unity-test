@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5709607785551571633}
   - component: {fileID: 5709607785551571632}
   - component: {fileID: 5709607785551571647}
-  - component: {fileID: 5709607785551571635}
   - component: {fileID: 3967855872087049407}
   m_Layer: 0
   m_Name: Lixo
@@ -99,25 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5709607785551571635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5709607785551571646}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20c3c3847e21414da99844522df29ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maximumX: 0
-  fixedY: 0
-  fixedZ: 0
-  timer: 0
-  Lixo: {fileID: 0}
-  MaxPoints: 0
-  points: 0
 --- !u!54 &3967855872087049407
 Rigidbody:
   m_ObjectHideFlags: 0

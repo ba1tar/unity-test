@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class DestroyLixo : MonoBehaviour
 {
+    public LixoSpawnerController lixoSpawnerController;
     private void OnCollisionEnter(Collision collision){
         if (collision.gameObject.CompareTag("Lixo"))
         {
             Destroy(collision.gameObject);
+            if(lixoSpawnerController.points > 0){
+            lixoSpawnerController.AddToPoints(-1);
+            }
         }
     }
 }
